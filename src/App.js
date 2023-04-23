@@ -4,10 +4,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/js/all.js";
 import "./App.css";
-
+import Footer from "./components/Footer";
 import AddDocument from "./components/AddDocument";
 import Document from "./components/Document";
 import DocumentsList from "./components/DocumentList";
+
 
 function App() {
   return (
@@ -29,7 +30,9 @@ function App() {
           </li>
         </div>
       </nav>
-
+      <footer className = 'na'>
+        
+      </footer>
       <div className="container mt-3">
         <Switch>
           <Route exact path={["/", "/tutorials"]} component={DocumentsList} />
@@ -37,8 +40,13 @@ function App() {
           <Route path="/tutorials/:id" component={Document} />
         </Switch>
       </div>
+
+    <Footer/>      
     </div>
   );
+
+
 }
+
 
 export default App;
